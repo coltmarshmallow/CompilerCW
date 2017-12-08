@@ -1,4 +1,5 @@
 using Triangle.Compiler.SyntacticAnalyzer;
+using Triangle.Compiler.ContextualAnalyzer;
 
 namespace Triangle.Compiler
 {
