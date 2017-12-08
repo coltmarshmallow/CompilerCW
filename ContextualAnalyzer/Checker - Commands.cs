@@ -51,10 +51,12 @@ namespace Triangle.Compiler.ContextualAnalyzer
 
         public Void VisitLetCommand(LetCommand ast, Void arg)
         {
-           // _idTable.OpenScope();
+            _idTable.OpenScope();
+
             ast.Declaration.Visit(this);
             ast.Command.Visit(this);
-            //_idTable.CloseScope();
+
+            _idTable.CloseScope();
             return null;
         }
 
