@@ -18,8 +18,13 @@ namespace Triangle.Compiler.ContextualAnalyzer
 
         public Declaration VisitIdentifier(Identifier identifier, Void arg)
         {
-            
-            return null;
+            var binding = _idTable.Retrieve(identifier.Spelling);
+
+            if (binding != null)
+            {
+                identifier.Declaration = binding;
+            }
+            return binding;
         }
 
         public TypeDenoter VisitIntegerLiteral(IntegerLiteral literal, Void arg)
@@ -29,8 +34,13 @@ namespace Triangle.Compiler.ContextualAnalyzer
 
         public Declaration VisitOperator(Operator op, Void arg)
         {
-            
-            return null;
+            var binding = _idTable.Retrieve(op.Spelling);
+
+            if (binding != null)
+            {
+                op.Declaration = binding;
+            }
+            return binding;
         }
 
     }
