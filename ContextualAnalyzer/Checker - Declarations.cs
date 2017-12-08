@@ -28,7 +28,7 @@ namespace Triangle.Compiler.ContextualAnalyzer
 
         public Void VisitSequentialDeclaration(SequentialDeclaration ast, Void arg)
         {
-            //
+            //0
             ast.firstDeclaration.Visit(this);
             ast.secondDeclaration.Visit(this);
             return null;
