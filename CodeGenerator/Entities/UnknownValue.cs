@@ -24,11 +24,13 @@ namespace Triangle.Compiler.CodeGenerator.Entities
         {
             if (vname.IsIndexed)
             {
-                
+                emitter.Emit(OpCode.LOAD, size, frame.DisplayRegister(_address), _address.Displacement);
+                emitter.Emit(OpCode.CALL, Register.SB, Register.PB, Primitive.ADD);
+                emitter.Emit(OpCode.LOADI, size, 0, 0);
             }
             else
             {
-               
+               emitter.Emit(OpCode.LOAD, size, frame.DisplayRegister(_address), _address.Displacement);
             }
         }
     }

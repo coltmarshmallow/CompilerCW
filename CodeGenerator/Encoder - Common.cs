@@ -21,8 +21,8 @@ namespace Triangle.Compiler.CodeGenerator
 
         public void EncodeRun(Program ast)
         {
-            //ast.Visit(this, Frame.Initial);
-            //_emitter.Emit(OpCode.HALT);
+            ast.Visit(this, Frame.Initial);
+            _emitter.Emit(OpCode.HALT);
         }
 
         public void SaveObjectProgram(string objectFileName)

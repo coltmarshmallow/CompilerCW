@@ -52,8 +52,8 @@ namespace Triangle.Compiler.CodeGenerator
 
         public Void VisitSequentialCommand(SequentialCommand ast, Frame frame)
         {
-            //ast.FirstCommand.Visit(this, frame);
-            //ast.SecondCommand.Visit(this, frame);
+            ast.FirstCommand.Visit(this, frame);
+            ast.SecondCommand.Visit(this, frame);
             return null;
         }
 

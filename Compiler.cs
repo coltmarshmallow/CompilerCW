@@ -39,6 +39,11 @@ namespace Triangle.Compiler
         Checker _checker;
 
         /// <summary>
+        /// The code generator.
+        /// </summary>
+        Encoder _encoder;
+
+        /// <summary>
         /// Creates a compiler for the given source file.
         /// </summary>
         /// <param name="sourceFileName">
@@ -51,7 +56,7 @@ namespace Triangle.Compiler
             _scanner = new Scanner(_source); //.EnableDebugging();
             _parser = new Parser(_scanner, ErrorReporter);
             _checker = new Checker(ErrorReporter);
-            //_encoder = new Encoder(ErrorReporter);
+            _encoder = new Encoder(ErrorReporter);
         }
 
         /// <summary>
@@ -96,7 +101,18 @@ namespace Triangle.Compiler
             ErrorReporter.ReportMessage("Compilation was unsuccessful.");
             return false;
             }
+
+            //3rd oass
+            ErrorReporter.ReportMessage("Code Generation ...");
+            _encoder.EncodeRun(program);
+            if (ErrorReporter.HasErrors)
+            {
+            ErrorReporter.ReportMessage("Compilation was unsuccessful.");
+            return false;
+            }
 	
+            // finally save the object code
+            //_encoder.SaveObjectProgram(ObjectFileName);
         }
 
         /// <summary>
