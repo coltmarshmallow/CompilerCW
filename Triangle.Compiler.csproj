@@ -6,7 +6,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Remove="Program.cs" />
     <Compile Remove="Interpreter.cs" />
     <Compile Remove="SyntaxTrees\Aggregates\ArrayAggregate.cs" />
     <Compile Remove="SyntaxTrees\Aggregates\MultipleArrayAggregate.cs" />
@@ -54,13 +53,6 @@
     <Compile Remove="SyntaxTrees\Actuals\FuncActualParameter.cs" />
     <Compile Remove="SyntaxTrees\Actuals\ProcActualParameter.cs" />
     <Compile Remove="ContextualAnalyzer\Checker - Aggregates.cs" />
-    <Compile Remove="ContextualAnalyzer\Checker - Commands.cs" />
-    <Compile Remove="ContextualAnalyzer\Checker - Common.cs" />
-    <Compile Remove="ContextualAnalyzer\Checker - Declarations.cs" />
-    <Compile Remove="ContextualAnalyzer\Checker - Expressions.cs" />
-    <Compile Remove="ContextualAnalyzer\Checker - Parameters.cs" />
-    <Compile Remove="ContextualAnalyzer\Checker - Programs.cs" />
-    <Compile Remove="ContextualAnalyzer\Checker - Terminals.cs" />
     <Compile Remove="CodeGenerator\Encoder - Aggregates.cs" />
     <Compile Remove="CodeGenerator\Entities\AddressableEntity.cs" />
     <Compile Remove="CodeGenerator\Entities\EqualityRoutine.cs" />

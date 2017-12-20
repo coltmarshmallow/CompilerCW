@@ -52,7 +52,7 @@ namespace Triangle.Compiler.SyntacticAnalyzer
          */
         Identifier ParseIdentifier()
         {
-            var token = Accept(TokenKind.Identifier);
+            Token token = Accept(TokenKind.Identifier);
             return new Identifier(token);
         }
 
@@ -67,7 +67,7 @@ namespace Triangle.Compiler.SyntacticAnalyzer
          */
         Operator ParseOperator()
         {
-            var token = Accept(TokenKind.Operator);
+            Token token = Accept(TokenKind.Operator);
             return new Operator(token);
         }
     }

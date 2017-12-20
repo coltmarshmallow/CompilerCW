@@ -85,7 +85,7 @@ namespace Triangle.Compiler.ContextualAnalyzer
 
         public TypeDenoter VisitLetExpression(LetExpression ast, Void arg)
         {
-            //wrong look back
+            
             _idTable.OpenScope();
 
             ast.Declaration.Visit(this);
