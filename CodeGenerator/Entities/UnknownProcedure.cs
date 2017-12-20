@@ -15,11 +15,13 @@ namespace Triangle.Compiler.CodeGenerator.Entities
 
         public void EncodeCall(Emitter emitter, Frame frame)
         {
-            
+            emitter.Emit(OpCode.LOAD, Machine.ClosureSize, frame.DisplayRegister(_address), _address.Displacement);
+            emitter.Emit(OpCode.CALLI, 0);
         }
 
         public void EncodeFetch(Emitter emitter, Frame frame)
         {
+            emitter.Emit(OpCode.LOAD, Machine.ClosureSize, frame.DisplayRegister(_address), _address.Displacement);
 
         }
 

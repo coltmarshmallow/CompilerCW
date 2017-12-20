@@ -112,7 +112,8 @@ namespace Triangle.Compiler
             }
 	
             // finally save the object code
-            //_encoder.SaveObjectProgram(ObjectFileName);
+            //_encoder.SaveObjectProgram(ObjectFileName);
+
         }
 
         /// <summary>

@@ -32,6 +32,11 @@ namespace Triangle.Compiler.CodeGenerator.Entities
             {
                emitter.Emit(OpCode.LOAD, size, frame.DisplayRegister(_address), _address.Displacement);
             }
+
+            /* 
+             emitter.Emit(OpCode.LOAD, size, frame.DisplayRegister(_address), _address.Displacement);
+             
+             */
         }
     }
 }

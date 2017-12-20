@@ -16,7 +16,8 @@ namespace Triangle.Compiler.CodeGenerator.Entities
 
         public void EncodeFetch(Emitter emitter, Frame frame, int size, Vname vname)
         {
-            emitter.Emit(xxxxxx, 0, 0, _value);
+            emitter.Emit(OpCode.LOADL, 0, 0, _value);
+            //emitter.Emit(xxxxxx, 0, 0, _value);
         }
     }
 }
