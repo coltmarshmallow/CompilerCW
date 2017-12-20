@@ -123,7 +123,7 @@ namespace Triangle.Compiler
         /// a string array containing the command-line arguments. This must
         /// be a single string specifying the source filename.
         /// </param>
-        ///
+        //
         public static void Main(string[] args)
         {
 
